@@ -1,37 +1,62 @@
+<!DOCTYPE html>
 <html>
-  <body>
-    <div id="app"></div>
-    <script type="text/jsx">
-      
-function header() {
-     return (<h1>Climateproject🌡️🌍🌧️🌪️</h1>)
-   }
-      
-  const app = document.getElementById("app")
-      
-function Header({ title }) {
-  console.log(title);
-  return <h1>title</h1>;
+
+<body>
+
+<script>
+function f1() {
+    let x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
 }
-      
-function HomePage() {
-  return (
-    <div>
-      <Header title="React 💙" />
-    </div>
-  );
-}
-      
-ReactDOM.render(<HomePage />, app);
+function f2() {
+      let x = document.getElementById("numb").value;
+      let text;
+      if (isNaN(x) || x < 1 || x > 10) {
+        text = "Input not valid";
+      } else {
+        text = "Input OK";
+      }
+      document.getElementById("demo").innerHTML = text;
+    }
 </script>
+
+
+<h1 id="id01">Old Heading</h1>
+<script>
+const element = document.getElementById("id01");
+element.innerHTML = "Climateproject🌡️🌍🌧️🌪️";
+</script>
+
+
+<h2> Datum: </h2>
+<script>
+    document.write(Date());
+</script>
+
+<body>
+    <h3>1. Function:</h3>
+    <form action="/action_page.php" method="post">
+      <input type="text" name="fname" required>
+      <input type="submit" value="Submit">
+    </form>
+    <p>If you click submit, without filling out the text field,
+    your browser will display an error message.</p>
     
-    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-    <!-- Babel Script -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script type="text/jsx">
-      const app = document.getElementById('app');
-      ReactDOM.render(<h1>Climateproject🌡️🌍🌧️🌪️</h1>, app);
-    </script>
-  </body>
-</html>
+
+    <h4>2. Function:</h4>
+    <p>Please input a number between 1 and 10:</p>
+    <input id="numb">
+    <button type="button" onclick="f2()">Submit</button>
+    <p id="demo"></p>
+</body>
+
+
+
+<img id="myImage" src="earth.gif">
+
+</html> 
+
+
